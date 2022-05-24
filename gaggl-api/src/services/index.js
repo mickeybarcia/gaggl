@@ -1,0 +1,9 @@
+module.exports.userService = require('./userService');
+module.exports.matchService = require('./matchService');
+module.exports.elasticService = require('./elasticService');
+module.exports.likeProducer = require('./likeProducer');
+module.exports.locationProducer = require('./locationProducer');
+module.exports.redisService = require('./redisService');
+module.exports.emailTokenService = require('./emailTokenService');
+module.exports.authTokenService = require('./authTokenService');
+module.exports.imageStorageService = require('./imageStorageService');

@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+
+  node-gaggl-db:
+    image: mongo
+    restart: always
+    container_name: node-gaggl-db
+    ports:
+      - 27017:27017 
+    volumes:
+      - node-gaggl-db:/data/db
+    networks: 
+      - node-gaggl-network
+
+  node-gaggl-app:
+    image: thisk8brd/node-gaggl-app:prod
+    build: 
+      context: .
+      target: prod
+    container_name: node-gaggl-app
+    restart: always
+    volumes: 
+      - .:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - node-gaggl-db
+    environment:
+      - MONGODB_URI=mongodb://node-gaggl-db/node-gaggl-db
+    networks: 
+      - node-gaggl-network
+
+volumes: 
+  node-gaggl-db:
+    name: node-gaggl-db
+
+networks: 
+  node-gaggl-network:
+    name: node-gaggl-network
