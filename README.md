@@ -50,3 +50,5 @@ python3 src/app.py
 - https://medium.com/analytics-vidhya/geospatial-data-with-elasticsearch-c7d3d5e51918
 - https://www.bezkoder.com/react-refresh-token/
 - https://www.bezkoder.com/react-typescript-authentication-example/#Add_Navbar_and_define_Routes
+
+<a href="https://www.flaticon.com/free-icons/correct" title="correct icons">Correct icons created by Freepik - Flaticon</a>
